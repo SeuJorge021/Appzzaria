@@ -1,12 +1,17 @@
+import { NavigationContainer } from '@react-navigation/native';
+
+import StackRoutes from './src/routes/StackRoutes';
+
 import { StyleSheet, View } from 'react-native';
 
 export default function App() {
   
    return (
-    <View >
-      
-     
-    </View>
+
+    <NavigationContainer>
+    <StackRoutes />
+  </NavigationContainer>
+  
   );
 }
 
