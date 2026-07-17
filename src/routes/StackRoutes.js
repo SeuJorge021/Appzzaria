@@ -11,14 +11,19 @@ export default function StackRoutes() {
   return (
     <Stack.Navigator>
 
+
       <Stack.Screen
-    name="CadastroUsuario"
-    component={CadastroUsuario}
+
+      name="Login"
+      component={Login}
+
   />
 
       <Stack.Screen
-        name="Login"
-        component={Login}
+
+        name="CadastroUsuario"
+        component={CadastroUsuario}
+        
       />
 
     </Stack.Navigator>
