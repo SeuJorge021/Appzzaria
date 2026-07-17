@@ -4,10 +4,13 @@ import {
   TextInput, 
   TouchableOpacity,
   Image,
-  StyleSheet 
+  StyleSheet,
+  Dimensions
 } from 'react-native';
 
 import Logo from '../../../assets/images/pizza-premium.png';
+
+import theme from '../../styles/theme';
 
 export default function Login({ navigation })  {
 
@@ -58,7 +61,7 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:'center',
     padding:20,
-    backgroundColor:'#FFF8F0',
+    backgroundColor: theme.colors.background,
   },
 
   logo:{
@@ -69,35 +72,34 @@ const styles = StyleSheet.create({
     marginBottom:20,
   },
 
-  input:{
-    borderWidth:1,
-    borderColor:'#CCCCCC',
-    borderRadius:8,
-    padding:12,
-    marginBottom:15,
-    backgroundColor:'#FFFFFF',
-  },
+ input:{
+  borderWidth:1,
+  borderColor: theme.colors.border,
+  borderRadius:8,
+  padding:12,
+  marginBottom:15,
+  backgroundColor: theme.colors.white,
+},
 
   button:{
-    backgroundColor:'#D62828',
-    padding:15,
-    borderRadius:8,
-    alignItems:'center',
-    marginTop:10,
-  },
+  backgroundColor: theme.colors.primary,
+  padding:15,
+  borderRadius:8,
+  alignItems:'center',
+  marginTop:10,
+},
 
   buttonText:{
-    color:'#FFFFFF',
-    fontSize:18,
-    fontWeight:'bold',
-  },
-
+  color: theme.colors.white,
+  fontSize:18,
+  fontWeight:'bold',
+},
   register:{
-    marginTop:25,
-    textAlign:'center',
-    color:'#D62828',
-    fontSize:18,
-    fontWeight:'bold',
-  }
+  marginTop:25,
+  textAlign:'center',
+  color: theme.colors.primary,
+  fontSize:18,
+  fontWeight:'bold',
+}
 
 });
