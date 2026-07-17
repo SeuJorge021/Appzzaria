@@ -1,11 +1,19 @@
-import { View, Text, TextInput, Pressable } from 'react-native';
+import { View, Image, Text, TextInput, Pressable } from 'react-native';
+
 import styles from './styles';
+
+import Logo from '../../../assets/images/pizza-premium.png';
 
 export default function CadastroUsuario({ navigation }) {
 
   return (
 
     <View style={styles.container}>
+
+      <Image
+  source={Logo}
+  style={styles.logo}
+/>
 
       <Text style={styles.titulo}>
         Criar Conta

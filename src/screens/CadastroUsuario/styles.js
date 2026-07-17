@@ -9,6 +9,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF8F0',
   },
 
+  logo: {
+  width: 400,
+  height: 220,
+  resizeMode: 'contain',
+  alignSelf: 'center',
+  marginBottom: 20,
+},
+
   titulo: {
     fontSize: 30,
     fontWeight: 'bold',

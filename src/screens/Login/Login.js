@@ -3,18 +3,22 @@ import {
   Text, 
   TextInput, 
   TouchableOpacity,
+  Image,
   StyleSheet 
 } from 'react-native';
 
-export default function Login() {
+import Logo from '../../../assets/images/pizza-premium.png';
+
+export default function Login({ navigation })  {
 
   return (
 
     <View style={styles.container}>
 
-      <Text style={styles.logo}>
-        🍕 APPZZARIA
-      </Text>
+      <Image
+  source={Logo}
+  style={styles.logo}
+/>
 
       <TextInput
         style={styles.input}
@@ -33,9 +37,13 @@ export default function Login() {
         </Text>
       </TouchableOpacity>
 
-      <Text style={styles.register}>
-        Criar uma conta
-      </Text>
+      <TouchableOpacity 
+  onPress={() => navigation.navigate('CadastroUsuario')}
+>
+  <Text style={styles.register}>
+    Criar uma conta
+  </Text>
+</TouchableOpacity>
 
     </View>
 
@@ -50,38 +58,46 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:'center',
     padding:20,
+    backgroundColor:'#FFF8F0',
   },
 
   logo:{
-    fontSize:32,
-    fontWeight:'bold',
-    textAlign:'center',
-    marginBottom:40,
+    width:400,
+    height:220,
+    resizeMode:'contain',
+    alignSelf:'center',
+    marginBottom:20,
   },
 
   input:{
     borderWidth:1,
-    borderColor:'#ccc',
-    padding:15,
+    borderColor:'#CCCCCC',
+    borderRadius:8,
+    padding:12,
     marginBottom:15,
-    borderRadius:10,
+    backgroundColor:'#FFFFFF',
   },
 
   button:{
-    backgroundColor:'red',
+    backgroundColor:'#D62828',
     padding:15,
-    borderRadius:10,
+    borderRadius:8,
     alignItems:'center',
+    marginTop:10,
   },
 
   buttonText:{
-    color:'#fff',
+    color:'#FFFFFF',
+    fontSize:18,
     fontWeight:'bold',
   },
 
   register:{
-    marginTop:20,
+    marginTop:25,
     textAlign:'center',
+    color:'#D62828',
+    fontSize:18,
+    fontWeight:'bold',
   }
 
 });
